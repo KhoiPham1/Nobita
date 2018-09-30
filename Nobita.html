@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body onload="docReady()" >
-<img id="nobita" src="nobita.jpg" style="position:absolute;left:1; top:1;" height="90" width="100"/>
+<img id="nobita" src="nobita.jpg" style="position:absolute;left:0; top:0;" height="90" width="100"/>
 <script>
 function upArrowPressed() {
     var element = document.getElementById("nobita");
@@ -13,19 +13,24 @@ function upArrowPressed() {
 }
 function dowArrowPressed() {
     var element= document.getElementById("nobita");
-    element.style.top = parseInt(element.style.top) + 5 + 'px';
+    element.style.top =(parseInt(element.style.top) + 5) + "px";
 }
 function leftArrowPressed() {
-    var elememt = document.getElementById("nobita");
-    element.style.left = parseInt(elememt.style.left) - 5 + 'px';
+    console.log(1);
+    var element = document.getElementById("nobita");
+    console.log(element);
+    element.style.left = (parseInt(element.style.left) - 5) + 'px';
+    console.log(2);
 }
 function  rightArrowPressed() {
     var element = document.getElementById("nobita");
     element.style.left = parseInt(element.style.left) + 5 + 'px';
 }
 function moveSelection(evt) {
-    switch (evt.keycode) {
+
+    switch (evt.keyCode) {
         case 37:
+            console.log(evt);
             leftArrowPressed();
             break;
         case 39:
